@@ -4,6 +4,7 @@ import "./db/mongooseClient.js";
 import pokemonRouter from "./routes/pokemonRoutes.js";
 import userRouter from "./routes/userRoutes.js";
 import authRouter from "./routes/authRoutes.js";
+import displayRouter from "./routes/displayRoutes.js";
 import errorHandler from "./middlewares/errorHandler.js";
 
 const app = express();
@@ -23,6 +24,8 @@ app.use("/pokemon", pokemonRouter);
 app.use("/users", userRouter);
 
 app.use("/auth", authRouter);
+
+app.use("/display", displayRouter);
 
 app.use(errorHandler);
 

@@ -1,5 +1,4 @@
 import { Schema, model } from "mongoose";
-import { application } from "express";
 
 const userSchema = new Schema(
     {
